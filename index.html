@@ -3,71 +3,93 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Моя первая HTML-страница</title>
+	<title>Формы</title>
+	<style>
+		h1 {
+			color: blue;
+			text-decoration: underline
+		}
+
+		label {
+			color: green;
+		}
+
+		strong {
+			font-weight: normal;
+			font-style: italic;
+		}
+
+		em {
+			font-weight: bold;
+			font-style: normal;
+		}
+	</style>
+	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-	<h1>Моя первая HTML-страница</h1>
-	<p>
-		<a href="page.html">Вторая страница</a>
-		<a href="https://google.com" target="_blank"><img src="googlelogo.png" alt="Google"></a>
-		<img src="https://eustasy.org/images/eustasy-dark.png">
-	</p>
-	<p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit. Asperiores eaque earum
-		enim est illo
-		in molestias<br>
-		necessitatibus praesentium quidem veniam.
-		Eum fugiat &nbsp; &lt; &gt; labore perferendis quia quo repellat repellendus! Fugit,
-		porro!
-	</p>
-	<!--
-		Привет с луны!
-	-->
-	<p>тег &lt;strong&gt; служит для выделения текста</p>
-	<p>Aliquam <em>architecto atque</em> beatae commodi cupiditate dignissimos ea eaque eligendi magnam magni maiores nulla
-		numquam porro praesentium provident quia quis, temporibus tenetur voluptatem, voluptatum? Accusamus adipisci
-		deserunt eos ipsum voluptate.
-	</p>
-	<h2>Подзаголовок</h2>
+	<h1>Моя первая HTML-форма</h1>
 
-	<ul>
-		<li>Первый <a href="https://google.com/chrome">пункт</a></li>
-		<li>Второй пункт</li>
-		<li>
-			Третий пункт
-			<ul>
-				<li>Первый подпункт</li>
-				<li>Второй подпункт</li>
-				<li>Третий подпункт</li>
-			</ul>
-		</li>
-		<li>Четвертый пункт</li>
-	</ul>
-	<ol>
-		<li>Первый пункт</li>
-		<li>Второй пункт</li>
-		<li>
-			Третий пункт
-			<ol>
-				<li>Первый подпункт</li>
-				<li>Второй подпункт</li>
-				<li>Третий подпункт</li>
-			</ol>
-		</li>
-		<li>Четвертый пункт</li>
-	</ol>
+	<form method="post">
+		<label for="email" class="email-label">Email: </label>
+		<input id="email" name="email" type="email" required tabindex="1" placeholder="Введите email"><br>
 
-	<p>Accusamus animi in iure libero maxime officiis omnis, quis tempora totam ullam. Consequuntur ea ipsam ratione
-		velit. Cum deserunt doloremque est, fugiat ipsum magni minus nihil praesentium quam ratione, ullam!
-	</p>
-	<p>Dignissimos, eaque, mollitia. Consectetur earum eligendi labore. Debitis dignissimos fuga inventore magni natus
-		nobis quaerat quia quidem, rem repellendus repudiandae sed suscipit veritatis. Earum fuga iste maxime similique
-		temporibus? Distinctio.
-	</p>
-	<p>Debitis, dolorum excepturi modi mollitia neque odit omnis optio perspiciatis quae quam qui quisquam soluta
-		temporibus tenetur voluptates! Accusantium ducimus neque pariatur quasi, ratione reiciendis totam voluptate.
-		Earum, soluta, vel!
-	</p>
+		<label for="password" class="email-label password-label">Пароль:</label>
+		<input id="password" name="password" type="password"><br>
+
+		<input type="number" min="2" max="100" tabindex="1"><br>
+
+		<label>
+			<input type="checkbox"  required value="YES">
+			Подписаться на рассылку
+		</label><br>
+
+		<input type="color" value="#c7319f">
+
+		<input type="date" tabindex="2" value="2019-03-01">
+
+		<input type="file"><br>
+
+		<span class="email-label">Хотите получать подарки:</span>
+
+		<label>
+			<input type="radio" name="gift" value="1"> да
+		</label>
+
+		<label>
+			<input type="radio" name="gift" value="2"> нет
+		</label>
+
+		<label>
+			<input type="radio" name="gift" value="3"> не знаю
+		</label><br>
+
+		<input type="month"><br>
+
+		<input type="range" min="5" max="50" ><br>
+
+		<input type="search" tabindex="3" value="">
+
+		<input type="tel">
+
+		<input type="week"><br>
+
+		<textarea name="text" cols="50" rows="5" placeholder="Описание"></textarea><br>
+
+		<select name="city">
+			<option value="1">Днепр</option>
+			<option value="2">Харьков</option>
+			<option selected value="4">Киев</option>
+		</select><br>
+
+		<input type="submit"> <input type="reset">
+		<input type="image" src="http://placehold.it/150x30">
+
+		<button>
+			<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+			text <em>italic</em> <strong style="font-weight: bold">strong</strong>
+		</button>
+	</form>
 </body>
 
 </html>
