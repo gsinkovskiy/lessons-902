@@ -1,14 +1,20 @@
 "use strict";
 
-/*
-Используя конструкцию if..else, напишите код, который будет спрашивать: «Каково «официальное» название JavaScript?».
-Если посетитель вводит «ECMAScript», то выводить «Верно!», если что-то другое – выводить «Не знаете? «ECMAScript»!».
- */
+// Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и
+// false – если хоть одно свойство есть.
 
-var answer = prompt('Каково «официальное» название JavaScript?');
+function isEmpty(obj) {
+	for (var prop in obj) {
+		return false;
+	}
 
-if (answer === 'ECMAScript') {
-	alert('Верно!');
-} else {
-	alert('Не знаете? «ECMAScript»!');
+	return true;
 }
+
+var schedule = {};
+
+alert( isEmpty(schedule) ); // true
+
+schedule["8:30"] = "подъём";
+
+alert( isEmpty(schedule) ); // false
