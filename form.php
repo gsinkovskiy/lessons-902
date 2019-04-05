@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+
 /* вариант для маленьких проектов
 require_once __DIR__ . '/classes/Form.php';
 require_once __DIR__ . '/classes/FormField.php';
